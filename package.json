@@ -1,0 +1,27 @@
+{
+	"name": "fxhxyz",
+	"description": "personal website",
+	"keywords": [
+		"fxhxyz",
+		"javascript",
+		"yarn",
+		"dev"
+	],
+	"homepage": "https://fxhxyz4.github.io/",
+	"bugs": "https://github.com/fxhxyz4/dsadsadsa/issues",
+	"author": "fxhxyz <fxhxyz@proton.me> (https://fxhxyz4.github.io/)",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"scripts": {
+		"start": "parcel ./src/index.html --dist-dir dist --cache-dir ./src/cache --no-source-maps -p 1010",
+		"watch": "parcel watch ./src/index.html --dist-dir dist --cache-dir src/.cache --no-source-maps",
+		"build": "parcel build ./src/index.html --dist-dir build --cache-dir src/.cache --no-source-maps"
+	},
+	"devDependencies": {
+		"@parcel/transformer-sass": "2.8.2",
+		"@parcel/transformer-webmanifest": "2.8.2",
+		"animejs": "^3.2.1",
+		"parcel": "^2.8.2"
+	}
+}
