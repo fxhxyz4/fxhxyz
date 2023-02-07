@@ -1,5 +1,6 @@
 {
   "name": "fxhxyz",
+  "version": "1.0.0",
   "description": "personal website",
   "keywords": [
     "fxhxyz",
@@ -10,8 +11,6 @@
   ],
   "homepage": "https://fxhxyz4.github.io/",
   "author": "fxhxyz <fxhxyz@proton.me> (https://fxhxyz4.github.io/)",
-  "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
   "scripts": {
     "start": "parcel ./src/index.html --dist-dir dist --cache-dir ./src/cache --no-source-maps -p 1010",
