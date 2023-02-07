@@ -19,6 +19,7 @@
     "build": "parcel build ./src/index.html --dist-dir build --cache-dir ./src/cache --no-source-maps"
   },
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.3",
     "animejs": "^3.2.1",
     "parcel": "^2.8.2"
   }
