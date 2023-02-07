@@ -9,8 +9,8 @@
     "animejs",
     "parceljs"
   ],
-  "homepage": "https://fxhxyz4.github.io/",
-  "author": "fxhxyz <fxhxyz@proton.me> (https://fxhxyz4.github.io/)",
+  "homepage": "https://fxhxyz.vercel.app/",
+  "author": "fxhxyz <fxhxyz@proton.me> (https://fxhxyz.vercel.app/)",
   "license": "MIT",
   "scripts": {
     "start": "parcel ./src/index.html --dist-dir dist --cache-dir ./src/cache --no-source-maps -p 1010",
