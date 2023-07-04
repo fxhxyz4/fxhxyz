@@ -1,5 +1,0 @@
-#
-
-### https://fxhxyz.vercel.app/
-
-#
