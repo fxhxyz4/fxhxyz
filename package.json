@@ -1,25 +1,42 @@
 {
   "name": "fxhxyz",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "personal website",
   "keywords": [
     "fxhxyz",
-    "javascript",
-    "yarn",
+    "parcel",
+    "anime",
     "animejs",
     "parceljs"
   ],
-  "homepage": "https://fxhxyz.vercel.app/",
-  "author": "fxhxyz <fxhxyz@proton.me> (https://fxhxyz.vercel.app/)",
-  "license": "MIT",
+	"author": {
+		"name": "fxhxyz4",
+		"email": "fxhxyz@proton.me",
+		"url": "https://fxhxyz.vercel.app/"
+	},
+	"homepage": "https://fxhxyz.vercel.app/",
+	"bugs": "https://github.com/fxhxyz4/personal/issues",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/fxhxyz4/personal.git"
+	},
+	"maintainers": [
+		{
+			"name": "fxhxyz4",
+			"email": "fxhxyz@proton.me"
+		}
+	],
+	"license": "MIT",
   "scripts": {
-    "start": "parcel ./src/index.html --dist-dir dist --cache-dir ./src/cache --no-source-maps -p 1010",
+    "start": "parcel ./src/index.html --dist-dir dist --cache-dir ./src/cache --no-source-maps -p 1337",
     "watch": "parcel watch ./src/index.html --dist-dir dist --cache-dir ./src/cache --no-source-maps",
     "build": "parcel build ./src/index.html --dist-dir build --cache-dir ./src/cache --no-source-maps"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.8.3",
-    "animejs": "^3.2.1",
     "parcel": "^2.8.2"
-  }
+  },
+  "engines": {
+		"node": "20.x"
+	}
 }
