@@ -5,7 +5,7 @@ $background: rgb(26, 26, 26);
 $color: #ffffff;
 $hover: rgba(207, 207, 207, 0.816);
 
-html {
+.html {
 	box-sizing: border-box;
 	font-family: $font;
 	font-size: 19px;
@@ -20,7 +20,7 @@ html {
 	box-sizing: inherit;
 }
 
-body {
+.body {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -45,22 +45,25 @@ body {
 	margin-top: 12px;
 }
 
-.main__list {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.list {
 	list-style-type: none;
-	margin-top: 25px;
 }
 
-.main__item {
+.list--flex {
+  display: flex;
+	justify-content: center;
+	align-items: center;
+  margin-top: 25px;
+}
+
+.list__item {
 	margin-right: 8px;
 	&:last-child {
 		margin-right: 0;
 	}
 }
 
-.main__link {
+.list__link {
 	color: inherit;
 	transition: color 300ms;
 	&:hover {
