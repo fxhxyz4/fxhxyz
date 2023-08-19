@@ -1,15 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap');
 
-:root {
-	--font: 'Montserrat', sans-serif;
-	--background: rgb(26, 26, 26);
-	--color: #ffffff;
-	--hover: rgba(207, 207, 207, 0.816);
-}
+$font: 'Montserrat', sans-serif;
+$background: rgb(26, 26, 26);
+$color: #ffffff;
+$hover: rgba(207, 207, 207, 0.816);
 
 html {
 	box-sizing: border-box;
-	font-family: var(--font);
+	font-family: $font;
 	font-size: 19px;
 	font-weight: 300;
 }
@@ -28,8 +26,8 @@ body {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	text-align: center;
-	background-color: var(--background);
-	color: var(--color);
+	background-color: $background;
+	color: $color;
 	user-select: none;
 	-ms-user-select: none;
 	-moz-user-select: none;
@@ -37,7 +35,7 @@ body {
 }
 
 #fxh {
-	stroke: var(--color);
+  stroke: $color;
 	cursor: auto;
 	transition: stroke 800ms;
 }
@@ -56,17 +54,17 @@ body {
 }
 
 .main__item {
-	margin-right: 7px;
+	margin-right: 8px;
 	&:last-child {
 		margin-right: 0;
 	}
 }
 
 .main__link {
-	color: var(--color);
+	color: inherit;
 	transition: color 300ms;
 	&:hover {
-		color: var(--hover);
+		color: $hover;
 	}
 }
 
