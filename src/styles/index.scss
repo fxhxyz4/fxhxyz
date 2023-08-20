@@ -20,21 +20,26 @@ $hover: rgba(207, 207, 207, 0.816);
 	box-sizing: inherit;
 }
 
-.body {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	text-align: center;
-	background-color: $background;
+.page {
+  width: 100vw;
+  height: 100vh;
 	color: $color;
+	background-color: $background;
 	user-select: none;
 	-ms-user-select: none;
 	-moz-user-select: none;
 	-webkit-user-select: none;
 }
 
-#fxh {
+.page__content {
+  position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.main__svg {
   stroke: $color;
 	cursor: auto;
 	transition: stroke 800ms;
@@ -49,7 +54,7 @@ $hover: rgba(207, 207, 207, 0.816);
 	list-style-type: none;
 }
 
-.main__list--flex {
+.main__list {
   display: flex;
 	justify-content: center;
 	align-items: center;
