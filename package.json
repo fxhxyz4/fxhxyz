@@ -40,6 +40,6 @@
     "posthtml-include": "^1.7.4"
   },
   "engines": {
-    "node": "18.x"
+    "node": "20.x"
   }
 }
