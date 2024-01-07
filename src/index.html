@@ -6,7 +6,7 @@
       <source src="./img/kaliload.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <div class="wrap animate__animated animate__fadeIn animate_slowed">
+    <div class="wrap">
       <include src="./partials/_main.html"></include>
     </div>
     <video class="back">
@@ -16,18 +16,13 @@
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
     <script>
       const urls = [
-        "https://webm.red/s1D9.webm",
-        "https://webm.red/csnJ.webm",
-        "https://webm.red/dTiN.webm",
-        "https://webm.red/KIm4.webm",
-        "https://webm.red/6KXH.webm",
         "https://webm.red/dJLN.webm",
-        "https://webm.red/Af9M.webm",
         "https://webm.red/jgax.webm",
-        "https://webm.red/NbI7.webm"
+        "https://webm.red/NbI7.webm",
       ];
 
       const loadVid = document.querySelector('.load');
+      const wrap = document.querySelector('.wrap');
 
       const backVid = document.querySelector('.back');
       const backVidSource = document.querySelector('.back__source');
@@ -35,20 +30,27 @@
       loadVid.addEventListener('ended', () => {
         loadVid.style.display = 'none';
 
-        document
-          .querySelector('.wrap').style.display = 'flex';
+        wrap.style.display = 'flex';
+        wrap.classList.add('animate__animated');
+        wrap.classList.add('animate__fadeIn');
+
+        wrap.classList.add('animate_slowed');
+
+        backVid.classList.add('animate__animated');
+        backVid.classList.add('animate__fadeIn');
 
         document.querySelector('video').load();
         backVidSource.src = urls[Math.floor(Math.random() * urls.length)];
 
         backVid.autoplay = true;
+        backVid.muted = true;
         backVid.load();
 
         anime({
           targets: '.main__svg path',
           strokeDashoffset: [anime.setDashoffset, 0],
           easing: 'easeInOutSine',
-          duration: 5966
+          duration: 5988
         });
       });
     </script>
