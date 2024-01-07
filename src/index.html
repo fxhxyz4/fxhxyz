@@ -9,18 +9,12 @@
     <div class="wrap">
       <include src="./partials/_main.html"></include>
     </div>
-    <video class="back">
-      <source class="back__source" type="video/webm">
+    <video class="back" loop>
+      <source class="back__source" type="video/mp4">
       Your browser does not support the video tag.
     </video>
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
     <script>
-      const urls = [
-        "https://webm.red/dJLN.webm",
-        "https://webm.red/jgax.webm",
-        "https://webm.red/NbI7.webm",
-      ];
-
       const loadVid = document.querySelector('.load');
       const wrap = document.querySelector('.wrap');
 
@@ -28,19 +22,23 @@
       const backVidSource = document.querySelector('.back__source');
 
       loadVid.addEventListener('ended', () => {
+        document.querySelector('.page')
+          .style.backgroundColor = `#010001`;
         loadVid.style.display = 'none';
 
-        wrap.style.display = 'flex';
         wrap.classList.add('animate__animated');
         wrap.classList.add('animate__fadeIn');
 
         wrap.classList.add('animate_slowed');
 
         backVid.classList.add('animate__animated');
+        backVid.classList.add('animate_slowed');
         backVid.classList.add('animate__fadeIn');
 
+        wrap.style.display = 'flex';
         document.querySelector('video').load();
-        backVidSource.src = urls[Math.floor(Math.random() * urls.length)];
+
+        backVidSource.src = `https://i.nuuls.com/GZDoT.mp4`;
 
         backVid.autoplay = true;
         backVid.muted = true;
@@ -50,7 +48,7 @@
           targets: '.main__svg path',
           strokeDashoffset: [anime.setDashoffset, 0],
           easing: 'easeInOutSine',
-          duration: 5988
+          duration: 8888
         });
       });
     </script>
