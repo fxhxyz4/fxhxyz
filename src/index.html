@@ -9,6 +9,23 @@
     <div class="wrap">
       <include src="./partials/_main.html"></include>
     </div>
+    <div class="login animate__animated animate__fadeIn animate_slowed animate__delay-1s">
+      <div class="login__top">
+        <div class="login__top-img">
+          <img src="./img/kali-logo.png" alt="kali logo)" width="100" height="100" />
+        </div>
+        <div class="login__top-form">
+          <from action="#" method="post">
+            <input class="login__top-user" type="text" placeholder="username" />
+            <input class="login__top-pswd" type="password" placeholder="password" />
+          </from>
+        </div>
+      </div>
+      <div class="login__bottom">
+        <button class="login__bottom-canc" type="button">Cancel</button>
+        <button class="login__bottom-login" type="button">Log in</button>
+      </div>
+    </div>
     <video class="back" loop>
       <source class="back__source" type="video/mp4">
       Your browser does not support the video tag.
@@ -18,37 +35,74 @@
       const loadVid = document.querySelector('.load');
       const wrap = document.querySelector('.wrap');
 
+      const loginBtn = document.querySelector('.login__bottom-login');
+      const cancelBtn = document.querySelector('.login__bottom-canc');
+
       const backVid = document.querySelector('.back');
       const backVidSource = document.querySelector('.back__source');
 
+      const usernameInput = document.querySelector('.login__top-user');
+      const passwordInput = document.querySelector('.login__top-pswd');
+
       loadVid.addEventListener('ended', () => {
-        document.querySelector('.page')
-          .style.backgroundColor = `#010001`;
+        document.querySelector('.page').style.backgroundColor = `#010001`;
+
         loadVid.style.display = 'none';
+        document.querySelector('.login').style.display = `block`;
 
-        wrap.classList.add('animate__animated');
-        wrap.classList.add('animate__fadeIn');
+        cancelBtn.addEventListener('click', () => {
+          console.log(`?`);
+        });
 
-        wrap.classList.add('animate_slowed');
+        const typeInput = (inputElement, text, speed, callback) => {
+          let i = 0;
 
-        backVid.classList.add('animate__animated');
-        backVid.classList.add('animate_slowed');
-        backVid.classList.add('animate__fadeIn');
+          function type() {
+            if (i < text.length) {
+              inputElement.value += text.charAt(i);
+              i++;
+              setTimeout(type, speed);
+            } else {
+              callback();
+            }
+          }
 
-        wrap.style.display = 'flex';
-        document.querySelector('video').load();
+          type();
+        };
 
-        backVidSource.src = `https://i.nuuls.com/GZDoT.mp4`;
+        setTimeout(() => {
+          typeInput(usernameInput, 'kali', 260, () => {
+            typeInput(passwordInput, 'kalilinux', 320, () => {
+              console.log('Login completed');
+            });
+          });
+        }, 1300);
 
-        backVid.autoplay = true;
-        backVid.muted = true;
-        backVid.load();
+        loginBtn.addEventListener('click', () => {
+          wrap.classList.add('animate__animated');
+          wrap.classList.add('animate__fadeIn');
 
-        anime({
-          targets: '.main__svg path',
-          strokeDashoffset: [anime.setDashoffset, 0],
-          easing: 'easeInOutSine',
-          duration: 8888
+          document.querySelector('.login').style.display = `none`;
+          wrap.classList.add('animate_slowed');
+
+          backVid.classList.add('animate__animated');
+          backVid.classList.add('animate_slowed');
+
+          backVid.classList.add('animate__fadeIn');
+          wrap.style.display = 'flex';
+
+          document.querySelector('video').load();
+          backVidSource.src = `https://i.nuuls.com/GZDoT.mp4`;
+
+          backVid.autoplay = true;
+          backVid.load();
+
+          anime({
+            targets: '.main__svg path',
+            strokeDashoffset: [anime.setDashoffset, 0],
+            easing: 'easeInOutSine',
+            duration: 5888
+          });
         });
       });
     </script>
