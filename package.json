@@ -37,9 +37,10 @@
     "@parcel/transformer-sass": "^2.8.3",
     "parcel": "^2.8.2",
     "parcel-reporter-clean-dist": "^1.0.4",
-    "posthtml-include": "^2.0.1"
+    "posthtml-include": "^2.0.1",
+    "svgo": "^3.3.2"
   },
   "engines": {
-    "node": "18.x"
+    "node": "22.x"
   }
 }

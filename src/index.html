@@ -2,122 +2,16 @@
 <html class="html" lang="en">
   <include src="./partials/_head.html"></include>
   <body class="page">
-    <video class="load" autoplay muted>
-      <source src="./img/kaliload.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <div class="wrap">
+    <div class="wrap animate_animated animate_fadeIn animate_slowed animate__delay-1s">
       <include src="./partials/_main.html"></include>
     </div>
-    <div class="login animate__animated animate__fadeIn animate_slowed animate__delay-1s">
-      <div class="login__top">
-        <div class="login__top-img">
-          <img src="./img/kali-logo.png" alt="kali logo)" width="100" height="100" />
-        </div>
-        <div class="login__top-form">
-          <from action="#" method="post">
-            <input class="login__top-user" type="text" placeholder="username" />
-            <input class="login__top-pswd" type="password" placeholder="password" />
-          </from>
-        </div>
-      </div>
-      <div class="login__bottom">
-        <button class="login__bottom-canc" type="button">Cancel</button>
-        <button class="login__bottom-login" type="button">Log in</button>
-      </div>
-    </div>
-    <video class="back" loop>
-      <source class="back__source" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
     <script>
-      const loadVid = document.querySelector('.load');
-      const wrap = document.querySelector('.wrap');
-
-      const loginBtn = document.querySelector('.login__bottom-login');
-      const cancelBtn = document.querySelector('.login__bottom-canc');
-
-      const backVid = document.querySelector('.back');
-      const backVidSource = document.querySelector('.back__source');
-
-      const usernameInput = document.querySelector('.login__top-user');
-      const passwordInput = document.querySelector('.login__top-pswd');
-
-      loadVid.addEventListener('ended', () => {
-        document.querySelector('.page').style.backgroundColor = `#010001`;
-
-        loadVid.style.display = 'none';
-        document.querySelector('.login').style.display = `block`;
-
-        cancelBtn.addEventListener('click', () => {
-          console.log(`?`);
-        });
-
-        const typeInput = (inputElement, text, speed, callback) => {
-          let i = 0;
-
-          function type() {
-            if (i < text.length) {
-              inputElement.value += text.charAt(i);
-              i++;
-              setTimeout(type, speed);
-            } else {
-              callback();
-            }
-          }
-
-          type();
-        };
-
-        setTimeout(() => {
-          typeInput(usernameInput, 'kali', 260, () => {
-            typeInput(passwordInput, 'kalilinux', 320, () => {
-              console.log('Login completed');
-            });
-          });
-        }, 19e2);
-
-        loginBtn.addEventListener('click', () => {
-          wrap.classList.add('animate__animated');
-          wrap.classList.add('animate__fadeIn');
-
-          document.querySelector('.login').style.display = `none`;
-          wrap.classList.add('animate_slowed');
-
-          backVid.classList.add('animate__animated');
-          backVid.classList.add('animate_slowed');
-
-          backVid.classList.add('animate__fadeIn');
-          wrap.style.display = 'flex';
-
-          document.querySelector('video').load();
-          backVidSource.src = `https://i.nuuls.com/GZDoT.mp4`;
-
-          backVid.autoplay = true;
-          backVid.load();
-
-          anime({
-            targets: '.main__svg path',
-            strokeDashoffset: [anime.setDashoffset, 0],
-            easing: 'easeInOutSine',
-            duration: 5888
-          });
-        });
-      });
-    </script>
-    <script type="text/javascript">
-      (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-      m[i].l=1*new Date();
-      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-      ym(96064576, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
+      anime({
+        targets: '.main__svg path',
+        strokeDashoffset: [anime.setDashoffset, 0],
+        easing: 'easeInOutSine',
+        duration: 5888
       });
     </script>
   </body>
