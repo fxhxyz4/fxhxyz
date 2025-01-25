@@ -75,18 +75,24 @@ body {
 
 .main__list {
   display: flex;
+  flex-wrap: nowrap;
 
 	justify-content: center;
 	align-items: center;
   margin-top: 25px;
+  gap: 30px;
+
+  @media screen and (max-width: 520px) {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 20px;
+  }
 }
 
 .list__item {
-	margin-right: 22px;
+  flex: 1 1 auto;
   fill: #fff;
-	&:last-child {
-		margin-right: 0;
-	}
 }
 
 .list__link {
@@ -126,4 +132,19 @@ body {
 	clip: rect(0 0 0 0);
 	clip-path: inset(50%);
 	margin: -1px;
+}
+
+@media screen and (min-width: 200px) and (max-width: 500px) {
+  .html {
+    font-size: 16px !important;
+  }
+
+  .main__subtitle, .footer {
+    font-size: 16px;
+  }
+
+  .main__svg {
+    width: 240px;
+    height: 115px;
+  }
 }
