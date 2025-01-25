@@ -31,7 +31,7 @@
   "scripts": {
     "start": "parcel ./src/index.html --dist-dir dist --cache-dir ./src/cache --no-source-maps -p 1337",
     "watch": "parcel watch ./src/index.html --dist-dir dist --cache-dir ./src/cache --no-source-maps",
-    "build": "parcel build ./src/index.html --dist-dir public_html --cache-dir ./src/cache --no-source-maps"
+    "build": "parcel build --no-content-hash ./src/img/symbol-defs.svg --public-url ./ --cache-dir ./src/cache --no-source-maps --dist-dir public_html && parcel build --no-content-hash ./src/index.html --public-url ./ --cache-dir ./src/cache --no-source-maps --dist-dir public_html"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.8.3",
