@@ -11,6 +11,7 @@ lerna-debug.log*
 node_modules
 package-lock.*
 build
+dist
 *.txt
 .parcel-cache
 
