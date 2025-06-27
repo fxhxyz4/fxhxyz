@@ -28,8 +28,8 @@ $hover: rgba(207, 207, 207, 0.816);
 body {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
   margin: 0;
   overflow: hidden;
@@ -43,15 +43,21 @@ body {
   -webkit-user-select: none;
 }
 
-.main {
-  flex: 1;
-  text-align: center;
-
+.wrap {
   position: absolute;
   top: 50%;
   left: 50%;
 
   transform: translate(-50%, -50%);
+}
+
+.main {
+  text-align: center;
+}
+
+.main__after {
+  margin-top: 32px;
+  text-align: center;
 }
 
 .main__svg {
@@ -112,6 +118,9 @@ body {
 }
 
 .footer {
+  position: absolute;
+  bottom: 0;
+
   padding: 20px;
 
   text-align: center;
