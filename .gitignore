@@ -1,3 +1,7 @@
+# Misc
+src/cache
+dist
+
 # Logs
 logs
 *.log
