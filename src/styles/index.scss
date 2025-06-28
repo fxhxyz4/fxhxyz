@@ -7,10 +7,11 @@ $dec: #ffcece;
 $hover: rgba(207, 207, 207, 0.816);
 
 .html {
-	box-sizing: border-box;
-	font-family: $font;
-	font-size: 24px;
-	font-weight: 300;
+  box-sizing: border-box;
+  font-family: $font;
+
+  font-size: 24px;
+  font-weight: 300;
 
   cursor: progress;
 }
@@ -18,25 +19,28 @@ $hover: rgba(207, 207, 207, 0.816);
 *,
 *::after,
 *::before {
-	padding: 0;
-	margin: 0;
-	box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+
+  box-sizing: inherit;
 }
 
 body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   min-height: 100vh;
   margin: 0;
-
-	color: $color;
   overflow: hidden;
-	background-color: $background;
-	user-select: none;
-	-ms-user-select: none;
-	-moz-user-select: none;
-	-webkit-user-select: none;
+
+  color: $color;
+  background-color: $background;
+
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 }
 
 .main {
@@ -52,12 +56,12 @@ body {
 
 .main__svg {
   stroke: $color;
-	transition: stroke 800ms;
+  transition: stroke 800ms;
 }
 
 .main__subtitle {
-	font-size: 25px;
-	margin-top: 12px;
+  font-size: 25px;
+  margin-top: 12px;
 }
 
 .main__span {
@@ -70,15 +74,16 @@ body {
 }
 
 .list {
-	list-style-type: none;
+  list-style-type: none;
 }
 
 .main__list {
   display: flex;
   flex-wrap: nowrap;
 
-	justify-content: center;
-	align-items: center;
+  justify-content: center;
+  align-items: center;
+
   margin-top: 25px;
   gap: 30px;
 
@@ -96,14 +101,14 @@ body {
 }
 
 .list__link {
-	fill: inherit;
-	transition: fill 500ms;
+  fill: inherit;
+  transition: fill 500ms;
 
   cursor: progress;
 
   &:hover {
-		fill: $dec;
-	}
+    fill: $dec;
+  }
 }
 
 .footer {
@@ -122,16 +127,16 @@ body {
 }
 
 .visually-hidden {
-	position: absolute;
-	white-space: nowrap;
-	width: 1px;
-	height: 1px;
-	overflow: hidden;
-	border: 0;
-	padding: 0;
-	clip: rect(0 0 0 0);
-	clip-path: inset(50%);
-	margin: -1px;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 @media screen and (min-width: 200px) and (max-width: 500px) {
@@ -139,7 +144,8 @@ body {
     font-size: 16px !important;
   }
 
-  .main__subtitle, .footer {
+  .main__subtitle,
+  .footer {
     font-size: 16px;
   }
 
