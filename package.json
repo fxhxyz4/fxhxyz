@@ -33,7 +33,7 @@
     "watch": "parcel watch ./src/index.html --dist-dir dist --cache-dir ./src/cache --no-source-maps",
     "serve": "parcel serve ./src/index.html --port 3000 --dist-dir dist --cache-dir ./src/cache --no-source-maps",
     "dev": "npm run watch & npm run serve",
-    "build": "parcel build --no-content-hash ./src/index.html --public-url ./ --cache-dir ./src/cache --no-source-maps --dist-dir build",
+    "build": "parcel build --no-content-hash ./src/index.html --public-url ./ --no-cache --cache-dir ./src/cache --no-source-maps --dist-dir build",
     "cache": "rm -rf .parcel-cache build dist"
   },
   "devDependencies": {
